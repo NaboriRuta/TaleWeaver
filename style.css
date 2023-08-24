@@ -1,17 +1,20 @@
+:root {
+    --main-text-family: 'Aquawax Pro';
+}
 @font-face {
     font-family: 'Aquawax Pro';
     src: url(additional-files/aquawax_pro/Aquawax-Pro-DemiBold-trial.ttf);
 }
 @font-face {
-    font-family: 'Monkey Act';
-    src: url(additional-files/monkey-act-font/MonkeyactPersonaluse-8Me6Z.otf);
+    font-family: 'Czech Gotika';
+    src: url(additional-files/czechgotika/CzechGotika.ttf);
 }
 nav {
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -80px;
+    margin-top: -75px;
     margin-left: -10px;
     background: -webkit-radial-gradient(rgb(0, 26, 98), rgb(0, 41, 154));
     width: 100.15%;
@@ -22,8 +25,7 @@ nav {
     flex-direction: 0;
     flex-grow: 0;
     margin-left: 10px;
-    font-family: 'Monkey Act';
-    font-size: 20px;
+    font-family: 'Czech Gotika';
 }
 .right {
     display: flex;
@@ -49,21 +51,17 @@ nav {
     display: block;
     text-decoration: none;
     font-size: 20px;
+    font-family: var(--main-text-family);
 }
-.dropdown a:hover {background-color: var(--hover-color);}
 .show {display: block;}
-header {
+header h1 {
     margin-top: 75px;
-    font-family: 'Monkey Act';
-    font-size: 60px;
+    font-family: 'Czech Gotika';
+    font-size: 80px;
     text-align: center;
 }
-main h1 {
-    margin-top: 75px;
-    font-family: 'Monkey Act';
-}
 main p {
-    font-family: 'Aquawax Pro';
+    font-family: var(--main-text-family);
     font-size: 20px;
     text-align: center;
 }
