@@ -13,20 +13,49 @@
             <h3>TaleWeaver</h3>
         </div>
         <div class="right">
-            <h3 onclick="activateDropdown()" class="dropdown-btn">三</h3>
-            <div id="dropdown" class="dropdown">
-                <a href="./home.html">Home</a>
-                <a href="./story-types.html">Story Types</a>
+            <h3 onclick="window.location.href='./home.html'">Home</h3>
+            <h3>Dashboard</h3>
+            <h3 onclick="activateDropdown1()" class="dropdown-btn">Generators</h3>
+            <div id="dropdown1" class="dropdown1">
                 <a href="./story-outline.html">Story Outlining</a>
-                <a href="./character-info.html">Character Information</a>
-                <a href="./character-names.html">Character Names</a>
+                <a href="./character-building.html">Character Builder</a>
                 <a href="./world-building.html">World Builder</a>
-                <a>Support Us</a>
+                <a href="./location-building.html">Location Builder</a>
+                <a href="./artifact-building.html">Artifact Builder</a>
             </div>
+            <h3 onclick="activateDropdown2()" class="dropdown-btn">Creative Writing Skills</h3>
+            <div id="dropdown2" class="dropdown2">
+                
+            </div>
+            <h3>Forums</h3>
+            <h3>Support Us</h3>
+            <h3 class="login">Login</h3>
         </div>
     </nav>
     <header>
         <h1>World Builder</h1>
     </header>
+    <main>
+        <form>
+            <label for="text">Submit your prompt to TaleWeaver, and it'll give you a list of world-building characteristics!</label><br>
+            <textarea id="text" name="text"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p>Here's what TaleWeaver's World Building can give you:</p>
+        <ul>
+            <li>Magic Systems (if the world has sci-fi elements)</li>
+            <li>Maps</li>
+            <li>Species Types (Who/what roams the world)</li>
+            <li>Customs</li>
+            <li>Currencies</li>
+            <li>Government Types</li>
+            <li>Important People (Historical Figures/Rulers)</li>
+            <li>World History</li>
+            <li>Important Locations</li>
+            <li>Important Item/Artifacts</li>
+        </ul>
+        <p>If you want to do more on specific locations, click <a href="./location-building.html">here!</a></p>
+        <p>If you want to do more on specific items/artifacts, click <a href="./artifact-building.html">here!</a></p>
+    </main>
 </body>
 </html>

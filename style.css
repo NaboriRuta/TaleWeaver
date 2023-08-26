@@ -1,24 +1,33 @@
-:root {
-    --main-text-family: 'Aquawax Pro';
+@font-face {
+    font-family: 'Elementary Gothic Bookhand';
+    src: url(additional-files/elementary_gothic_bookhand/Elementary_Gothic_Bookhand.ttf);
 }
 @font-face {
-    font-family: 'Aquawax Pro';
-    src: url(additional-files/aquawax_pro/Aquawax-Pro-DemiBold-trial.ttf);
+    font-family: "FairydustB";
+    src: url(additional-files/FairyDustB.ttf);
+}
+@font-face {
+    font-family: 'Times Sans Serif';
+    src: url(additional-files/times_sans_serif/TIMESS__.ttf);
 }
 @font-face {
     font-family: 'Czech Gotika';
     src: url(additional-files/czechgotika/CzechGotika.ttf);
+}
+:root {
+    --main-text-family: 'Times Sans Serif';
 }
 nav {
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -75px;
+    margin-top: -115px;
     margin-left: -10px;
-    background: -webkit-radial-gradient(rgb(0, 26, 98), rgb(0, 41, 154));
+    background: -webkit-linear-gradient(15deg,#Ce9779, #744830);
     width: 100.15%;
     color: aliceblue;
+    padding-bottom: 15px;
 }
 .left {
     display: flex;
@@ -26,26 +35,35 @@ nav {
     flex-grow: 0;
     margin-left: 10px;
     font-family: 'Czech Gotika';
+    font-size: 25px;
+    margin-top: 7px;
 }
 .right {
     display: flex;
     justify-content:center;
+    align-items:center;
     flex-grow: 0;
+    font-family: 'FairydustB';
+    font-size: 17px;
+    margin-top: 20px;
 }
-.right:hover, .right:focus {color: rgb(212, 221, 228);}
+.right h3 {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.login {margin-right: 25px;}
+.right h3:hover, .right h3:focus {color: rgb(212, 221, 228);}
 .dropdown-btn {
     margin-right: 20px;
     cursor: pointer;
 }
-.dropdown {
+.dropdown1, .dropdown2 {
     display: none;
     position: absolute;
-    margin-top: 75px;
-    background-color: var(--accent-color);
-    right: 0;
+    margin-top: 343px;
+    background-color: #fefbea;
 }
-.dropdown a {
-    background-color: var(--accent-color);
+.dropdown1 a, .dropdown2 a {
     color: black;
     padding: 12px 20px;
     display: block;
@@ -53,15 +71,28 @@ nav {
     font-size: 20px;
     font-family: var(--main-text-family);
 }
+.dropdown1 {margin-left: -400px;}
 .show {display: block;}
 header h1 {
-    margin-top: 75px;
+    margin-top: 115px;
     font-family: 'Czech Gotika';
     font-size: 80px;
     text-align: center;
 }
-main p {
+main p, main ul {
     font-family: var(--main-text-family);
     font-size: 20px;
     text-align: center;
+    list-style-position: inside;
+}
+form {
+    font-family: var(--main-text-family);
+    font-size: 20px;
+    text-align: center;
+}
+textarea {
+    width: 25%;
+    font-size: 20px;
+    padding: 15px;
+    background-color: rgb(239, 224, 209);
 }
