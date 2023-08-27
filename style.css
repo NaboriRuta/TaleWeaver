@@ -16,7 +16,9 @@
 }
 :root {
     --main-text-family: 'Times Sans Serif';
+    --accent-color: #fefbea;
 }
+body {overflow-x: hidden;}
 nav {
     position: fixed;
     display: flex;
@@ -41,7 +43,6 @@ nav {
 .right {
     display: flex;
     justify-content:center;
-    align-items:center;
     flex-grow: 0;
     font-family: 'FairydustB';
     font-size: 17px;
@@ -50,8 +51,9 @@ nav {
 .right h3 {
     margin-right: 15px;
     margin-left: 15px;
+    transition-property: color;
+    transition-duration: 0.3s;
 }
-.login {margin-right: 25px;}
 .right h3:hover, .right h3:focus {color: rgb(212, 221, 228);}
 .dropdown-btn {
     margin-right: 20px;
@@ -60,8 +62,9 @@ nav {
 .dropdown1, .dropdown2 {
     display: none;
     position: absolute;
-    margin-top: 343px;
-    background-color: #fefbea;
+    margin-top: 50px;
+    background-color: var(--accent-color);
+    border-radius: 20px;
 }
 .dropdown1 a, .dropdown2 a {
     color: black;
@@ -71,13 +74,15 @@ nav {
     font-size: 20px;
     font-family: var(--main-text-family);
 }
-.dropdown1 {margin-left: -400px;}
+.dropdown1 {margin-left: -250px;}
+.dropdown2 {margin-left: 25px;}
 .show {display: block;}
 header h1 {
     margin-top: 115px;
     font-family: 'Czech Gotika';
     font-size: 80px;
     text-align: center;
+    padding: 50px;
 }
 main p, main ul {
     font-family: var(--main-text-family);
@@ -94,5 +99,6 @@ textarea {
     width: 25%;
     font-size: 20px;
     padding: 15px;
-    background-color: rgb(239, 224, 209);
+    background-color: var(--accent-color);
+    border: none;
 }
