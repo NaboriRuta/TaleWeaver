@@ -11,12 +11,17 @@
     src: url(additional-files/czechgotika/CzechGotika.ttf);
 }
 :root {
-    --main-text-family: 'Times Sans Serif';
-    --accent-color: #fef6ea;
+    --main-text-family: 'Times Sans Serif', 'Times New Roman';
+    --accent-color: #e8c7a4;
     --error-color: #cc3333;
     --success-color: #4bb544;
+    --transition-duration: 0.3s;
+    --hover-color: #d7ab7c;
 }
-body {overflow-x: hidden;}
+body {
+    overflow-x: hidden;
+    background-color: #fef6ea;
+}
 nav {
     position: fixed;
     display: flex;
@@ -26,7 +31,7 @@ nav {
     margin-left: -10px;
     background: -webkit-linear-gradient(15deg,#Ce9779, #744830);
     width: 100.15%;
-    color: aliceblue;
+    color: #fff;
     padding-bottom: 15px;
 }
 .left {
@@ -51,9 +56,10 @@ nav {
     margin-right: 15px;
     margin-left: 15px;
     transition-property: color;
-    transition-duration: 0.3s;
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
 }
-.right h3:hover, .right h3:focus {color: rgb(212, 221, 228);}
+.right h3:hover, .right h3:focus {color: #ddd;}
 .dropdown-btn {
     margin-right: 20px;
     cursor: pointer;
@@ -71,7 +77,13 @@ nav {
     display: block;
     text-decoration: none;
     font-size: 20px;
+    border-radius: 20px;
     font-family: var(--main-text-family);
+    transition-property: background-color;
+    transition-duration: var(--transition-duration);
+}
+.dropdown1 a:hover, .dropdown2 a:hover {
+    background-color: var(--hover-color);
 }
 .dropdown1 {margin-left: -250px;}
 .dropdown2 {margin-left: 25px;}
@@ -83,11 +95,10 @@ h1 {
     text-align: center;
     padding: 50px;
 }
-main p, main ul {
+main p {
     font-family: var(--main-text-family);
     font-size: 20px;
     text-align: center;
-    list-style-position: inside;
 }
 form {
     font-family: var(--main-text-family);
@@ -96,10 +107,12 @@ form {
 }
 textarea {
     width: 25%;
+    height: 100px;
     font-size: 20px;
     padding: 15px;
-    background-color: var(--accent-color);
-    border: none;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    outline: none;
 }
 .home-grid {
     display:grid;
@@ -125,15 +138,11 @@ button, input[type=submit] {
     font-family: var(--main-text-family);
     font-size: 20px;
     transition-property: box-shadow;
-    transition-duration: 0.3s;
+    transition-duration: var(--transition-duration);
     cursor: pointer;
 }
-button:hover, input[type=submit]:hover {
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
-}
-h2, .home-grid h3 {
-    text-align: center;
-}
+button:hover, input[type=submit]:hover {box-shadow: 3px 3px rgba(0, 0, 0, 0.3);}
+h2, .home-grid h3 {text-align: center;}
 h2 {font-size: 50px; font-family: 'Czech Gotika';}
 .home-grid h3 {font-size: 25px; font-family: 'Times Sans Serif';}
 .email {
@@ -144,9 +153,7 @@ h2 {font-size: 50px; font-family: 'Czech Gotika';}
     display: block;
     text-align: center;
 }
-.buttons button {
-    margin-top: 10px;
-}
+.buttons button {margin-top: 10px;}
 input[type=text], input[type=password], input[type=email] {
     border: none;
     border-bottom: 2px solid black;
@@ -154,16 +161,42 @@ input[type=text], input[type=password], input[type=email] {
     font-size: 20px;
     text-align: center;
     width: 25%;
+    background-color: #fef6ea;
+    outline: none;
 }
-.success-msg {
-    color: var(--success-color);
-}
-.err-msg, .incorrect-credential {
-    color: var(--error-color);
-}
+.success-msg {color: var(--success-color);}
+.err-msg, .incorrect-credential {color: var(--error-color);}
 .err-msg {margin-top: 10px;}
 .form-msg {margin-top: -20px;}
-.input-err {border-bottom: 2px solid var(--error-color);}
-.hidden {
-    display: none;
+.hidden {display: none;}
+.add-map {
+    width: 90%;
+    border-radius: 20px;
+    transition-property: width, background-color;
+    transition-duration: var(--transition-duration);
+}
+.add-map:hover {
+    width: 92%;
+    box-shadow: none;
+    background-color: var(--hover-color);
+}
+.summary {width: 80%;}
+p a:visited {color: blue;}
+.add-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+}
+.top-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    margin-left: 20px;
+}
+.add-img {
+    height: 300px;
+    width: 300px;
+}
+.right-buttons {
+    float: right;
 }
