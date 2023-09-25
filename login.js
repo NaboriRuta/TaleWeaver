@@ -42,8 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target.id === "confirm" && !(e.target.value === document.querySelector('#createPass').value)) {
                 setInputError(inputElement, "Password must match")
             }
+            if (e.target.id === "addEmail" && e.target.value.length > 0 && !(e.target.value.includes("@"))) {
+                setInputError(inputElement, "Must be a valid email")
+            }
+            if (e.target.id === "createUsername" && e.target.value.length > 0 && e.target.value.includes(" ")) {
+                setInputError(inputElement, "There must be no spaces in your username")
+            }
         });
-        inputElement.addEventListener("input", e => {
+        inputElement.addEventListener("input", () => {
             clearInputError(inputElement);
         });
     });

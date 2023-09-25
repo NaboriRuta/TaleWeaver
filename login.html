@@ -16,7 +16,7 @@
         <div class="right">
             <h3 onclick="window.location.href='./home.html'">Home</h3>
             <h3>Dashboard</h3>
-            <h3 onclick="activateDropdown1()" class="dropdown-btn">Generators</h3>
+            <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Forms</h3>
             <div id="dropdown1" class="dropdown1">
                 <a href="./forms/story-outline.html">Story Outlining</a>
                 <a href="./forms/character-building.html">Character Builder</a>
@@ -48,40 +48,39 @@
                 <h1>Login</h1>
                 <div class="form-msg incorrect-credential"></div><br/>
                 <div class="input">
-                    <input type="text" class="input username" autofocus placeholder="Username">
+                    <input type="text" class="input username" name="username" autofocus required placeholder="Username">
                     <div class="err-msg"></div>
                 </div><br/>
                 <div class="input-container">
-                    <input type="password" class="input password" autofocus placeholder="Password">
+                    <input type="password" class="input password" name="password" autofocus required placeholder="Password">
                     <div class="err-msg"></div>
                 </div><br/>
                 <input type="submit" value="Login" class="login-submit">
                 <p class="forgot-pass">Forgot your password? Click <a href="#">here!</a></p>
                 <p class="new-acc">Don't have an account? <a href="#" id="createAccount">Create New</a></p>
             </form>
-            <form class="form hidden" id="newAcc">
+            <form class="form hidden" id="newAcc" action="./create-account.php" method="post">
                 <h1>Create Account</h1>
                 <div class="form-msg incorrect-credential"></div><br/>
                 <div class="input">
-                    <input type="text" class="input createUsername" id="createUsername" autofocus placeholder="Username">
+                    <input type="text" class="input createUsername" name="createUsername" id="createUsername" autofocus required placeholder="Username">
                     <div class="err-msg"></div>
                 </div><br/>
                 <div class="input-container">
-                    <input type="email" class=" input addEmail" autofocus placeholder="Email Address">
+                    <input type="email" class=" input addEmail" name="addEmail" id="addEmail" autofocus required placeholder="Email Address">
                     <div class="err-msg"></div>
                 </div><br/>
                 <div class="input-container">
-                    <input type="password" class="input createPass" id="createPass" autofocus placeholder="Password">
+                    <input type="password" class="input createPass" name="createPass" id="createPass" autofocus required placeholder="Password">
                     <div class="err-msg"></div>
                 </div><br/>
                 <div class="input-container">
-                    <input type="password" class="input confirm" id="confirm" autofocus placeholder="Confirm Password">
+                    <input type="password" class="input confirm" name="confirm" id="confirm" autofocus required placeholder="Confirm Password">
                     <div class="err-msg"></div>
                 </div><br/>
                 <input type="submit" value="Create Account" class="new-acc-submit">
                 <p class="old-acc">Already have an account? <a href="#" id="toLogin">Login</a></p>
             </form>
-        </div>
         </div>
     </main>
 </body>
