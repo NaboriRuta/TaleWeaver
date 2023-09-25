@@ -15,7 +15,7 @@
         <div class="right">
             <h3 onclick="window.location.href='../home.html'">Home</h3>
             <h3>Dashboard</h3>
-            <h3 onclick="activateDropdown1()" class="dropdown-btn">Generators</h3>
+            <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Forms</h3>
             <div id="dropdown1" class="dropdown1">
                 <a href="./story-outline.html">Story Outlining</a>
                 <a href="./character-building.html">Character Builder</a>
@@ -46,8 +46,24 @@
     </header>
     <main>
         <form>
-            <label for="text">Submit your prompt to TaleWeaver, and it'll start building your character!</label><br/>
-            <textarea id="text" name="text"></textarea><br/>
+            <h3>Add New Character...</h3><br>
+            <div class="top-grid">
+                <button class="add-img">Image</button>
+                <div class="name-cont">
+                    <label for="add-name">Name: </label>
+                    <input type="text" name="add-name" id="add-name"><br/><br/>
+                </div>
+            </div>
+            <label for="summary">Description: </label><br/>
+            <textarea name="summary" id="summary" class="summary"></textarea>
+            <div class="add-grid">
+                <p class="add age">+ Age</p>
+                <p class="add species">+ Species</p>
+                <p class="add skill">+ Skill</p>
+                <p class="add theme-song">+ Theme Song</p>
+                <p class="add hobby">+ Hobby</p>
+                <p class="add characteristic">+ Characteristic</p>
+            </div>
             <input type="submit" value="Submit">
         </form>
     </main>

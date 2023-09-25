@@ -15,7 +15,7 @@
         <div class="right">
             <h3 onclick="window.location.href='../home.html'">Home</h3>
             <h3>Dashboard</h3>
-            <h3 onclick="activateDropdown1()" class="dropdown-btn">Generators</h3>
+            <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Forms</h3>
             <div id="dropdown1" class="dropdown1">
                 <a href="./story-outline.html">Story Outlining</a>
                 <a href="./character-building.html">Character Builder</a>
@@ -46,20 +46,24 @@
     </header>
     <main>
         <form>
-            <label for="text">Submit your prompt to TaleWeaver, and it'll build a special arifact for you!</label><br>
-            <textarea id="text" name="text"></textarea><br>
+            <h3>Add New Artifact...</h3><br>
+            <div class="top-grid">
+                <button class="add-img">Image</button>
+                <div class="name-cont">
+                    <label for="add-name">Name: </label>
+                    <input type="text" name="artifact-name" id="artifact-name"><br/><br/>
+                </div>
+            </div>
+            <label for="summary">Artifact Importance: </label><br/>
+            <textarea name="summary" id="summary" class="summary"></textarea>
+            <div class="add-grid">
+                <p class="add creator">+ Creator</p>
+                <p class="add use">+ Use</p>
+                <p class="add ability">+ Ability</p>
+                <p class="add location">+ Location</p>
+            </div>
             <input type="submit" value="Submit">
         </form>
-        <p>Here's what TaleWeaver's Artifact Builder can give you:</p>
-        <ul>
-            <li>Artifact Name</li>
-            <li>Special/Magical Abilities (if Fantasy is the genre)</li>
-            <li>Character Storylines (without names)</li>
-            <li>Description</li>
-            <li>Picture</li>
-            <li>Location Found/Bought/Made</li>
-            <li>Use</li>
-        </ul>
         <p>If you want to do more on specific locations, click <a href="./location-building.html">here!</a></p>
     </main>
 </body>

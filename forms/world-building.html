@@ -15,7 +15,7 @@
         <div class="right">
             <h3 onclick="window.location.href='../home.html'">Home</h3>
             <h3>Dashboard</h3>
-            <h3 onclick="activateDropdown1()" class="dropdown-btn">Generators</h3>
+            <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Forms</h3>
             <div id="dropdown1" class="dropdown1">
                 <a href="./story-outline.html">Story Outlining</a>
                 <a href="./character-building.html">Character Builder</a>
@@ -46,23 +46,26 @@
     </header>
     <main>
         <form>
-            <label for="text">Submit your prompt to TaleWeaver, and it'll give you a list of world-building characteristics!</label><br>
-            <textarea id="text" name="text"></textarea><br>
+            <h3>Add New World...</h3><br>
+            <button class="add-map">Insert Map/Image</button><br/><br>
+            <label for="location-name">Name: </label>
+            <input type="text" name="location-name" id="location-name"><br/><br/>
+            <label for="summary">World History: </label><br/>
+            <textarea name="summary" id="summary" class="summary"></textarea>
+            <div class="add-grid">
+                <p class="add loc">+ Location</p>
+                <p class="add cust">+ Custom</p>
+                <p class="add currency">+ Currency</p>
+                <p class="add gov">+ Government</p>
+                <p class="add magic">+ Magic System</p>
+                <p class="add species">+ Species</p>
+                <p class="add people">+ Important Person</p>
+                <p class="add flora">+ Flora (Plants)</p>
+                <p class="add fauna">+ Fauna (Huntable Animal)</p>
+                <p class="add artifact">+ Artifact</p>
+            </div>
             <input type="submit" value="Submit">
         </form>
-        <p>Here's what TaleWeaver's World Building can give you:</p>
-        <ul>
-            <li>Magic Systems (if the world has sci-fi elements)</li>
-            <li>Maps</li>
-            <li>Species Types (Who/what roams the world)</li>
-            <li>Customs</li>
-            <li>Currencies</li>
-            <li>Government Types</li>
-            <li>Important People (Historical Figures/Rulers)</li>
-            <li>World History</li>
-            <li>Important Locations</li>
-            <li>Important Items/Artifacts</li>
-        </ul>
         <p>If you want to do more on specific locations, click <a href="./location-building.html">here!</a></p>
         <p>If you want to do more on specific items/artifacts, click <a href="./artifact-building.html">here!</a></p>
     </main>
