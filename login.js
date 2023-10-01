@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target.id === "createUsername" && e.target.value.length > 0 && e.target.value.includes(" ")) {
                 setInputError(inputElement, "There must be no spaces in your username")
             }
+            if (e.target.id === "createUsername" && e.target.value.length > 0 && e.target.value.length < 5) {
+                setInputError(inputElement, "Username must be at least 5 characters")
+            }
         });
         inputElement.addEventListener("input", () => {
             clearInputError(inputElement);
