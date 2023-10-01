@@ -86,7 +86,7 @@ nav {
     background-color: var(--hover-color);
 }
 .dropdown1 {margin-left: -250px;}
-.dropdown2 {margin-left: 25px;}
+.dropdown2 {margin-left: 55px;}
 .show {display: block;}
 h1 {
     margin-top: 115px;
@@ -190,12 +190,16 @@ p a:visited {color: blue;}
 .top-grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 2fr;
     justify-content: center;
+    justify-items: flex;
     margin-left: 20px;
 }
 .add-img {
-    height: 300px;
-    width: 300px;
+    grid-row: 1 / span 2;
+}
+.desc-cont {
+    grid-column: 2;
 }
 .right-buttons {
     float: right;
