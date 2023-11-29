@@ -17,6 +17,8 @@
     --success-color: #4bb544;
     --transition-duration: 0.3s;
     --hover-color: #d7ab7c;
+    --darker-purple: #604f74;
+    --lighter-purple: #7c6b8e;
 }
 body {
     overflow-x: hidden;
@@ -30,6 +32,7 @@ nav {
     margin-top: -115px;
     margin-left: -10px;
     background: -webkit-linear-gradient(15deg,#Ce9779, #744830);
+    box-shadow: 0px 10px 5px 5px var(--darker-purple);
     width: 100.15%;
     color: #fff;
     padding-bottom: 15px;
@@ -126,9 +129,16 @@ textarea {
     align-content: center;
 }
 .part {
-    border: 4px solid var(--accent-color);
+    border: 4px solid var(--darker-purple);
     border-radius: 20px;
-    padding: 30px;
+    background-color: var(--lighter-purple);
+    color: #fff;
+    padding-bottom: 30px;
+}
+.part button {
+    border-radius: 20px;
+    background-color: var(--darker-purple);
+    color: #fff;
 }
 button, input[type=submit] {
     border: none;
@@ -144,7 +154,7 @@ button, input[type=submit] {
 button:hover, input[type=submit]:hover {box-shadow: 3px 3px rgba(0, 0, 0, 0.3);}
 h2, .home-grid h3 {text-align: center;}
 h2 {font-size: 50px; font-family: 'Czech Gotika';}
-.home-grid h3 {font-size: 25px; font-family: 'Times Sans Serif';}
+.home-grid h3 {font-size: 25px; font-family: var(--main-text-family);}
 .email {
     cursor: pointer;
     text-decoration: underline;
@@ -202,5 +212,6 @@ p a:visited {color: blue;}
     grid-column: 2;
 }
 .right-buttons {
-    float: right;
+    display: flex;
+    justify-content: right;
 }
