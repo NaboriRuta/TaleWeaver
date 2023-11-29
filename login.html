@@ -9,6 +9,7 @@
     <script src="./login.js"></script>
 </head>
 <body>
+    <!--Nav Bar-->
     <nav>
         <div class="left">
             <h3>TaleWeaver</h3>
@@ -44,6 +45,7 @@
     </nav>
     <main>
         <div class="container">
+            <!--Login Form for already added users-->
             <form class="form" id="login">
                 <h1>Login</h1>
                 <div class="form-msg incorrect-credential"></div><br/>
@@ -59,6 +61,7 @@
                 <p class="forgot-pass">Forgot your password? Click <a href="#">here!</a></p>
                 <p class="new-acc">Don't have an account? <a href="#" id="createAccount">Create New</a></p>
             </form>
+            <!--Create Account Form for new users-->
             <form class="form hidden" id="newAcc" action="./create-account.php" method="post">
                 <h1>Create Account</h1>
                 <div class="form-msg incorrect-credential"></div><br/>
