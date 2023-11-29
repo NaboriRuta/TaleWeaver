@@ -1,3 +1,4 @@
+// All login functions are defined up here
 function setFormMessage(formElement, type, msg) {
     const msgElement = formElement.querySelector('.form-msg');
     msgElement.textContent = msg;
@@ -15,6 +16,7 @@ function clearInputError(inputElement) {
     inputElement.parentElement.querySelector(".err-msg").textContent = "";
 }
 
+// Nestle the form errors
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector('#login');
     const newAccForm = document.querySelector('#newAcc');
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         setFormMessage(loginForm, 'incorrect-credential', "Incorrect Username/Password");
     });
+    // Add all error messages here
     document.querySelectorAll('.input').forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
             if (e.target.id === 'createPass' && e.target.value.length > 0 && e.target.value.length < 8) {
@@ -52,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setInputError(inputElement, "Username must be at least 5 characters")
             }
         });
+        // Clear errors
         inputElement.addEventListener("input", () => {
             clearInputError(inputElement);
         });
