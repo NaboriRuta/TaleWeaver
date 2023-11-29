@@ -8,6 +8,7 @@
     <link href="./style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
+    <!--Navigation bar-->
     <nav>
         <div class="left">
             <h3>TaleWeaver</h3>
@@ -15,7 +16,7 @@
         <div class="right">
             <h3 onclick="window.location.href='./home.html'">Home</h3>
             <h3>Dashboard</h3>
-            <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Forms</h3>
+            <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Planners</h3>
             <div id="dropdown1" class="dropdown1">
                 <a href="./forms/story-outline.html">Story Outlining</a>
                 <a href="./forms/character-building.html">Character Builder</a>
@@ -36,11 +37,12 @@
                 <a href="./writing/planning-strategies.html">Planning Strategies</a>
                 <a href="./writing/hooks.html">Hooks</a>
             </div>
-            <h3>Forums</h3>
+            <h3 onclick="window.location.href='./forums.html'">Forums</h3>
             <h3 onclick="window.location.href='./about-us.html'">About Us</h3>
             <h3 onclick="window.location.href='./login.html'" class="login">Login</h3>
         </div>
     </nav>
+    <!--Begin main part of the home page-->
     <header>
         <h1>TaleWeaver</h1>
     </header>
@@ -58,9 +60,12 @@
             </div>
             <div class="part">
                 <p>Lacking Organization?</p>
-                <button onclick="window.location.href='./forms/forms.html'">Visit Our Story Forms</button>
+                <button onclick="window.location.href='./forms/forms.html'">Visit Our Story Planners</button>
             </div>
         </div>
     </main>
+    <footer>
+        <!--A creative commons lisence will go here-->
+    </footer>
 </body>
 </html>
