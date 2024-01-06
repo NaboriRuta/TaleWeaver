@@ -213,9 +213,9 @@ p a:visited {color: blue;}
 }
 .right-buttons {
     display: flex;
-    justify-content: left;
+    justify-content: right;
 }
 .center-buttons {
     display: flex;
     justify-content: space-around;
-}   
+}

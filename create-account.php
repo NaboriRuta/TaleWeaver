@@ -66,7 +66,7 @@
             <h1>Successfully created account!</h1>
         </header>
         <main>
-            <div class="center-buttons">
+            <div class="center-buttons" style="display: flex; justify-content: space-around;">
                 <button onclick="window.location.href='./dashboard.html'">Go to Dashboard</button>
                 <button onclick="window.location.href='./home.html'">Go to Home</button>
             </div>
