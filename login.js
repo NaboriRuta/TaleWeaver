@@ -31,11 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         newAccForm.classList.add('hidden');
         loginForm.classList.remove('hidden');
     });
-
-    loginForm.addEventListener('submit', e => {
-        e.preventDefault();
-        setFormMessage(loginForm, 'incorrect-credential', "Incorrect Username/Password");
-    });
     // Add all error messages here
     document.querySelectorAll('.input').forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
