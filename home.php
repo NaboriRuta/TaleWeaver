@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if (isset($_SESSION["active_user_id"])) {
+    $mysqli = require __DIR__ . "/db.php";
+    $sql = "SELECT * FROM userInfo WHERE id = {$_SESSION["active_user_id"]}";
+
+    $result = $mysqli->query($sql);
+    $active_user = $result->fetch_assoc();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +24,7 @@
             <h3>TaleWeaver</h3>
         </div>
         <div class="right">
-            <h3 onclick="window.location.href='./home.html'">Home</h3>
+            <h3 onclick="window.location.href='./home.php'">Home</h3>
             <h3>Dashboard</h3>
             <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Planners</h3>
             <div id="dropdown1" class="dropdown1">
@@ -38,8 +48,12 @@
                 <a href="./writing/hooks.html">Hooks</a>
             </div>
             <h3 onclick="window.location.href='./forums.html'">Forums</h3>
-            <h3 onclick="window.location.href='./about-us.html'">About Us</h3>
-            <h3 onclick="window.location.href='./login.html'" class="login">Login</h3>
+            <h3 onclick="window.location.href='./about-us.php'">About Us</h3>
+            <?php  if (isset($active_user)): ?>
+            <h3 onclick="window.location.href='./account-change.php'" class="login"><?= $active_user["username"]?></h3>
+            <?php else: ?>
+            <h3 onclick="window.location.href='./login.php'" class="login">Login</h3>
+            <?php endif;?>
         </div>
     </nav>
     <!--Begin main part of the home page-->
