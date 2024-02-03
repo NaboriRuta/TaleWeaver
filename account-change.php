@@ -24,7 +24,7 @@ if (isset($_SESSION["active_user_id"])) {
             <h3>TaleWeaver</h3>
         </div>
         <div class="right">
-            <h3 onclick="window.location.href='./home.html'">Home</h3>
+            <h3 onclick="window.location.href='./home.php'">Home</h3>
             <h3>Dashboard</h3>
             <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Planners</h3>
             <div id="dropdown1" class="dropdown1">
@@ -48,7 +48,7 @@ if (isset($_SESSION["active_user_id"])) {
                 <a href="./writing/hooks.html">Hooks</a>
             </div>
             <h3 onclick="window.location.href='./forums.html'">Forums</h3>
-            <h3 onclick="window.location.href='./about-us.html'">About Us</h3>
+            <h3 onclick="window.location.href='./about-us.php'">About Us</h3>
             <?php  if (isset($active_user)): ?>
             <h3 onclick="window.location.href='./account-change.php'" class="login"><?= $active_user["username"]?></h3>
             <?php else: ?>
