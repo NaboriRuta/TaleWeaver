@@ -91,9 +91,9 @@ if (isset($_SESSION["active_user_id"])) {
         </div><br>
         <h2>Website Socials:</h2>
         <div class="center-buttons" style="display: flex; justify-content: space-around;">
-            <button>Instagram</button>
-            <button>YouTube</button>
-            <button>Discord</button>
+            <button onclick="window.location.href='https://www.instagram.com/taleweaverdotcom/'">Instagram</button>
+            <button onclick="window.location.href='https://www.youtube.com/channel/UCXtT1nq5OTEYMrr0kyQfAuQ'">YouTube</button>
+            <button onclick="window.location.href='https://discord.gg/UuaZ8MUc7R'">Discord</button>
         </div>
     </main>
 </body>
