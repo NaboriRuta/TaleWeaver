@@ -1,5 +1,6 @@
 <html>
     <?php 
+    session_start();
         $user = $_POST["createUsername"];
         $email = $_POST["addEmail"];
         $pass_encrypted = password_hash($_POST["createPass"], PASSWORD_DEFAULT);
@@ -14,11 +15,14 @@
         $stmt->bind_param("sss", $user, $email, $pass_encrypted);
 
         if ($stmt->execute()) {
-            header("Location: ./create-account-success.html");
+            $_SESSION["username_taken"] = false;
+            header("Location: ./login.php");
             exit;
         } else {
             if ($mysqli->errno === 1062) {
-                die("Username is already taken");
+                $_SESSION["username_taken"] = true;
+                header("Location: ./login.php");
+                exit;
             }
             die($mysqli->error . " " . $mysqli->errno);
         }

@@ -1,6 +1,8 @@
 <?php
+    session_start();
     $is_invalid = false;
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $_SESSION["username_taken"] = null;
         $user = $_POST["username"];
         $pass = $_POST["password"];
         $mysqli = require __DIR__ . "/db.php";
@@ -13,10 +15,9 @@
 
         if ($active_user) {
             if (password_verify($pass, $active_user["pass_encrypted"])) {
-                session_start();
                 $_SESSION["active_user_id"] = $active_user["id"];
 
-                header("Location: ./login-success.php");
+                header("Location: ./dashboard.php");
                 exit;
             } else {
                 $is_invalid = true;
@@ -78,9 +79,12 @@
                 <h1>Login</h1>
                 <?php if ($is_invalid === true): ?>
                 <div class="form-msg incorrect-credential">Incorrect Username/Password</div><br/>
-                <?php else: ?>
-                <div class="form-msg incorrect-credential"></div><br/>
-                <?php endif; ?>
+                <?php else: ?> <?php endif; ?>
+                <?php if ($_SESSION["username_taken"] === true): ?>
+                <div class="form-msg incorrect-credential">Username is already taken</div><br/>
+                <?php elseif ($_SESSION["username_taken"] === false): ?>
+                <div class="form-msg success-msg">Successfully created account!</div><br/>
+                <?php else: ?> <?php endif; ?>
                 <div class="input">
                     <input type="text" class="input username" name="username" id="username" autofocus required placeholder="Username">
                     <div class="err-msg"></div>
@@ -96,7 +100,9 @@
             <!--Create Account Form for new users-->
             <form class="form hidden" id="newAcc" action="./create-account.php" method="post">
                 <h1>Create Account</h1>
-                <div class="form-msg incorrect-credential"></div><br/>
+                <?php if ($_SESSION["username_taken"] === true): ?>
+                <div class="form-msg incorrect-credential">Username Is Already Taken</div><br/>
+                <?php else: ?> <?php endif; ?>
                 <div class="input">
                     <input type="text" class="input createUsername" name="createUsername" id="createUsername" autofocus required placeholder="Username">
                     <div class="err-msg"></div>
