@@ -85,7 +85,7 @@ if (isset($_SESSION["active_user_id"])) {
             </div>
             <div class="part">
                 <h3>Elias Gomez, aka Someone</h3>
-                <p onclick="window.location.href='mailto:'" class="email">Email: eliasgomez19@icloud.com</p>
+                <p onclick="window.location.href='mailto:eliasgomex19@icloud.com'" class="email">Email: eliasgomez19@icloud.com</p>
                 <p>Discord: @someone06178</p>
             </div>
         </div><br>
