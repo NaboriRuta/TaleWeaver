@@ -62,6 +62,7 @@ if (isset($_SESSION["active_user_id"])) {
     </header>
     <main>
         <button onclick="window.location.href='./logout.php'">Logout</button>
+        <button onclick="window.location.href='./delete-account.php'">Delete Account</button>
     </main>
     <footer>
         <!--A creative commons lisence will go here-->
