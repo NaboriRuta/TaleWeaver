@@ -16,6 +16,7 @@
         if ($active_user) {
             if (password_verify($pass, $active_user["pass_encrypted"])) {
                 $_SESSION["active_user_id"] = $active_user["id"];
+                $_SESSION["active_user_name"] = $active_user["username"];
 
                 header("Location: ./dashboard.php");
                 exit;
