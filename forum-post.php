@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaleWeaver - Forums</title>
+    <title>TaleWeaver - Create New Post</title>
     <script src="./dropdown-script.js" type="text/javascript"></script>
     <link href="./style.css" type="text/css" rel="stylesheet" />
 </head>
@@ -43,11 +43,7 @@
             </div>
         </nav>
         <main>
-            <h1>Forums</h1>
-            <button>Create New</button>
-            <div class="forum-grid">
-                
-            </div>
+            <h1>Create New Post</h1>
         </main>
 </body>
 </html>
