@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if (isset($_SESSION["active_user_id"])) {
+    $mysqli = require __DIR__ . "/db.php";
+    $sql = "SELECT * FROM userInfo WHERE id = {$_SESSION["active_user_id"]}";
+
+    $result = $mysqli->query($sql);
+    $active_user = $result->fetch_assoc();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +49,16 @@
                 </div>
                 <h3 onclick="window.location.href='./forums.php'">Forums</h3>
                 <h3 onclick="window.location.href='./about-us.php'">About Us</h3>
+                <?php  if (isset($active_user)): ?>
+                <h3 onclick="window.location.href='./account-change.php'" class="login"><?= $active_user["username"]?></h3>
+                <?php else: ?>
                 <h3 onclick="window.location.href='./login.php'" class="login">Login</h3>
+                <?php endif;?>
             </div>
         </nav>
         <main>
             <h1>Forums</h1>
-            <button>Create New</button>
+            <button onclick="window.location.href='./forum-post.php'">Create New</button>
             <div class="forum-grid">
                 
             </div>
