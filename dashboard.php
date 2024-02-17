@@ -6,6 +6,9 @@ if (isset($_SESSION["active_user_id"])) {
 
     $result = $mysqli->query($sql);
     $active_user = $result->fetch_assoc();
+} else {
+    header("Location: ./login.php"); 
+    exit;
 }
 ?>
 <!DOCTYPE html>
