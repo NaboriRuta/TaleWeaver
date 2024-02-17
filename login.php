@@ -46,7 +46,7 @@
         </div>
         <div class="right">
             <h3 onclick="window.location.href='./home.php'">Home</h3>
-            <h3>Dashboard</h3>
+            <h3 onclick="window.location.href='./dashboard.php'">Dashboard</h3>
             <h3 onclick="activateDropdown1()" class="dropdown-btn">Story Forms</h3>
             <div id="dropdown1" class="dropdown1">
                 <a href="./forms/story-outline.html">Story Outlining</a>
